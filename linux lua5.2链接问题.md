@@ -9,3 +9,6 @@ loadlib.c:(.text+0xd18)：对‘dlclose’未定义的引用
 
 编译时要在尾部加上 -lm -llua -ldl解决了：
 gcc -o test test.c -llua -lm -ldl
+
+编译代码，生成动态链接库时：
+  gcc mylib.c -fPIC -shared -o mylib.so
